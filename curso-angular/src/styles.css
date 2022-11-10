@@ -1,3 +1,13 @@
 * {
     font-family: Helvetica;
 }
+
+body {
+    padding-bottom: 500px;
+}
+
+.class {
+    border-bottom: 1px solid greenyellow;
+    padding: 2em;
+    margin-bottom: 1em;
+}

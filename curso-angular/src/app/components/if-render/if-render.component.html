@@ -1,0 +1,9 @@
+<div class="class">
+  <div *ngIf="canShow">Olá, eu finalmente pude aparecer, como você está?</div>
+  <h2 *ngIf="name == 'Arthur Estevan Vargas'; else nameNotFound">
+    Estou bem {{ name }}, obrigado por perguntar.
+  </h2>
+  <ng-template #nameNotFound>
+    <h2>Algo deu errado, tente novamente mais tarde.</h2>
+  </ng-template>
+</div>
