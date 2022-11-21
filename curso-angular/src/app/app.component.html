@@ -88,11 +88,11 @@
 
     <div class="col-3">
       <div class="card border-dark">
-        <div class="card-header" [ngClass]="class"></div>
+        <div class="card-header" [ngClass]="class">{{"APRENDENDO SOBRE PIPE" | titlecase}}</div>
         <div class="card-body">
-
+          <app-pipes></app-pipes>
         </div>
-        <div class="card-footer"></div>
+        <div class="card-footer">Aprendemos alguns pipes que podem ser interessante na hora de escrever o código, assim nos poupando de algum tipo de CSS ou lógica no Typescript.</div>
       </div>
     </div>
   </section>
