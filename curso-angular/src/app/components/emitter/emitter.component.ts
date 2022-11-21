@@ -15,6 +15,7 @@ export class EmitterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Lógica que faz minha mistura de números
   onChangeNumber(): void {
     this.myNumber = Math.floor(Math.random() * 10);
   } 

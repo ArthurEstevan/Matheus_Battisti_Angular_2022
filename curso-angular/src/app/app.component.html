@@ -1,6 +1,7 @@
 <div class="container mt-5">
 
   <section class="row">
+
     <div class="col-3">
       <div class="card border-dark">
         <div class="card-header" [ngClass]="class">Criando Primeiro Componente</div>
@@ -43,16 +44,18 @@
 
     <div class="col-3">
       <div class="card border-dark">
-        <div class="card-header" [ngClass]="class">IF and ELSE</div>
+        <div class="card-header" [ngClass]="class">*ngIf Angular</div>
         <div class="card-body">
           <app-if-render></app-if-render>
         </div>
         <div class="card-footer">Acima utlizamos mais uma diretiva do Angular dessa vez *ngIf, clicando no botão pode ver a resposta quando não atende ao criterio do meu if.</div>
       </div>
     </div>
+
   </section>
 
   <section class="row mt-5 ">
+
     <div class="col-3">
       <div class="card border-dark">
         <div class="card-header" [ngClass]="class">(click)</div>
@@ -65,21 +68,21 @@
 
     <div class="col-3">
       <div class="card border-dark">
-        <div class="card-header" [ngClass]="class"></div>
+        <div class="card-header" [ngClass]="class">@Output() Angular</div>
         <div class="card-body">
           <app-emitter></app-emitter>
         </div>
-        <div class="card-footer"></div>
+        <div class="card-footer">Utilizando o @output() conseguimos fazer com que o filho mande informações para o pai, onde toda lógica será feita.</div>
       </div>
     </div>
 
     <div class="col-3">
       <div class="card border-dark">
-        <div class="card-header" [ngClass]="class"></div>
+        <div class="card-header" [ngClass]="class">*ngFor Angular</div>
         <div class="card-body">
-
+          <app-list-render></app-list-render>
         </div>
-        <div class="card-footer"></div>
+        <div class="card-footer">Nesse card temos duas aulas, primeiro aprendemos como inicializar uma lista e fazer um loop nela e segundo apredemos como criar uma interface assim limpando mais nosso código não deixando a tipagem das coisas serem any.</div>
       </div>
     </div>
 
