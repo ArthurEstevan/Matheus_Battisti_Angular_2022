@@ -1,0 +1,11 @@
+<!-- 
+    Esse é meu componente pai que está recebendo a emissão do componente filho 
+-->
+
+<h6>O número emitido foi: {{ myNumber }}</h6>
+<!-- 
+    Aqui estou capturando a emissão do meu componente filho
+( dentro dos parenteses preciso colocar o mesmo nome que estou emitindo na classe filho ) 
+no parâmetro da minha chamada eu coloco a função que está alocada no Typescript pai
+-->
+<app-change-number [welcome]="welcome" (changeNumber)="onChangeNumber()"></app-change-number>

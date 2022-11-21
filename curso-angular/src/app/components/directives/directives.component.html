@@ -1,9 +1,11 @@
-<div class="class">
-  <h2
-    [ngStyle]="{ color: color, 'font-size': size + 'px', 'font-family': font }"
-  >
-    = Aprendendo ngStyle =
-  </h2>
+<!-- 
+    Aqui em vez de usarmos o style que sempre utlizamos em HTML utilizamos nossa diretiva:
+    [ngStyle] do Angular, podemos passar valores e consumir do Typescript 
+  -->
+<h6 [ngStyle]="{ color: color, 'font-family': font }">= Aprendendo ngStyle =</h6>
 
-  <h2 [ngClass]="classes">= Aprendendo Diretivas de Classes =</h2>
-</div>
+<!-- 
+    Aqui estamos utilizando outra diretiva:
+    [ngClass] que consome parametros prontos do Typescript, assim apenas aplica a class CSS 
+  -->
+<h6 [ngClass]="classes">= Aprendendo ngClass =</h6>

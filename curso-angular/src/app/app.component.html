@@ -1,6 +1,96 @@
-<h1>Hello World!</h1>
-<app-first-component></app-first-component>
-<app-parent-data [welcome]="welcome" [userData]="userData"></app-parent-data>
-<app-directives></app-directives>
-<app-if-render></app-if-render>
-<app-events></app-events>
+<div class="container mt-5">
+
+  <section class="row">
+    <div class="col-3">
+      <div class="card border-dark">
+        <div class="card-header" [ngClass]="class">Criando Primeiro Componente</div>
+        <div class="card-body">
+          <app-first-component></app-first-component>
+        </div>
+        <div class="card-footer">Acima podemos observar como funciona a interpolação de dados em nosso componente.</div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card border-dark">
+        <div class="card-header" [ngClass]="class">@Input()</div>
+        <div class="card-body">
+          <!-- 
+            Meu componente pai está passando dados para o componente filho 
+            ( app.componente = pai | app.parente-dada = filho )
+            Ele utiliza esses dados da forma que achar melhor 
+          -->
+          <!-- 
+            [ dentro dessas chaves passamos um nome que será o mesmo na classe filho ]
+            " nas aspas passamos da mesma maneira que fizemos na interpolação com o nome
+            que está no Typescript" 
+          -->
+          <app-parent-data [welcome]="welcome" [userData]="userData"></app-parent-data>
+        </div>
+        <div class="card-footer">Você pode entender como funciona essa função do Angular abrindo o projeto e lendo o HTML e os Typescripts.</div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card border-dark">
+        <div class="card-header" [ngClass]="class">Angular Diretivas</div>
+        <div class="card-body">
+          <app-directives></app-directives>
+        </div>
+        <div class="card-footer">Aqui são apenas maneiras de como estilizar seu HTML sem usar CSS básico, confira tudo no próprio projeto.</div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card border-dark">
+        <div class="card-header" [ngClass]="class">IF and ELSE</div>
+        <div class="card-body">
+          <app-if-render></app-if-render>
+        </div>
+        <div class="card-footer">Acima utlizamos mais uma diretiva do Angular dessa vez *ngIf, clicando no botão pode ver a resposta quando não atende ao criterio do meu if.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row mt-5 ">
+    <div class="col-3">
+      <div class="card border-dark">
+        <div class="card-header" [ngClass]="class">(click)</div>
+        <div class="card-body">
+          <app-events></app-events>
+        </div>
+        <div class="card-footer">Utilizando nosso (click) adicionamos eventos em nosso HTML.</div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card border-dark">
+        <div class="card-header" [ngClass]="class"></div>
+        <div class="card-body">
+          <app-emitter></app-emitter>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card border-dark">
+        <div class="card-header" [ngClass]="class"></div>
+        <div class="card-body">
+
+        </div>
+        <div class="card-footer"></div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card border-dark">
+        <div class="card-header" [ngClass]="class"></div>
+        <div class="card-body">
+
+        </div>
+        <div class="card-footer"></div>
+      </div>
+    </div>
+  </section>
+</div>

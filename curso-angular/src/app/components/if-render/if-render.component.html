@@ -1,9 +1,34 @@
-<div class="class">
-  <div *ngIf="canShow">Olá, eu finalmente pude aparecer, como você está?</div>
-  <h2 *ngIf="name == 'Arthur Estevan Vargas'; else nameNotFound">
-    Estou bem {{ name }}, obrigado por perguntar.
-  </h2>
-  <ng-template #nameNotFound>
-    <h2>Algo deu errado, tente novamente mais tarde.</h2>
-  </ng-template>
-</div>
+<!-- 
+  Nesse h6 usamos outra diretiva Angular:
+*ngIf serve para atender a uma operação true ou false
+Estou utlizando uma interpolação e recebendo dado do meu Typescript 
+-->
+<h6 *ngIf="canShow">
+  Olá, <br>
+  Como você está?
+</h6>
+
+<!-- 
+  Utilizando a mesma direita *ngIf podemos também fazer lógica em nosso HTML
+Esse exemplo utliza da seguinte questão: 
+Se name for igual a "Arthur Estevan Vargas" true se não false
+( nem é uma interpolação da nossa classe Typescript )
+-->
+<h6 *ngIf="name == 'Arthur Estevan'; else nameNotFound">
+  Estou bem {{ name }}.
+</h6>
+
+<!-- 
+  Agora note que temos um " ; else nameNotFound"
+Isso corresponde a segunda opção se a primeira for false
+Geramos essa segunda opção utlizando o <ng-template></ng-template> do próprio Angular
+Onde adicionamos uma propriedade dentro dele #nameNotFound para fazer ligação ao nosso h6
+Então resumindo só vai mostrar nosso ↓ se o *ngIf der false
+<h6>Algo deu errado, tente novamente mais tarde.</h6>
+-->
+
+<button class="btn btn-primary" (click)="showElse()">Acionar ELSE</button>
+
+<ng-template #nameNotFound>
+  <h6 [ngStyle]="{color: 'red'}">ERROR</h6>
+</ng-template>

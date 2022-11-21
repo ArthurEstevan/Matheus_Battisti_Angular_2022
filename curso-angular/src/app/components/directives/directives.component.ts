@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
+  // Passando valor em formato number
   size: number = 40
+
+  // Passando valor em formato string
   font: string = 'Arial'
   color: string = "coral"
+
+  // Passando valor em formato ArrayList
+  // Além de esses valores serem classes do meu arquivo css para a diretiva [ngClass] consumir
   classes = [
-    'coral-title',
-    'big-font'
+    'coral-title'
   ]
 
   constructor() { }

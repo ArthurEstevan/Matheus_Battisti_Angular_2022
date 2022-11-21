@@ -1,7 +1,13 @@
-<div class="class">
-  <h2>Nome: {{ name }}</h2>
-  <h2>Idade: {{ age }}</h2>
-  <h2>Emprego: {{ job }}</h2>
-  <h2>Hobbies: {{ hobbies[1] }}</h2>
-  <h2>Carro: {{ car.model }} | {{ car.year }} | {{ car.color }}</h2>
-</div>
+<h6>Nome: {{ name }}</h6>
+
+<!-- 
+    Adicionar {{ }} serve como interpolação de dados;
+    Esses dados estão sendo recebidos do nosso arquivo Typescript; 
+  -->
+
+<h6>Idade: {{ age }}</h6>
+<h6>Emprego: {{ job }}</h6>
+<h6>Hobbies: {{ hobbies[1] }}</h6>
+
+<!-- Chamamos os dados do JSON apartir de seu atributo -->
+<h6>Carro: {{ car.model }} | {{ car.year }} | {{ car.color }}</h6>
