@@ -1,7 +1,7 @@
 <div class="container mt-5">
 
   <section class="row">
-    
+
     <div class="col-3">
       <div class="card border-dark">
         <div class="card-header" [ngClass]="class">Criando Primeiro Componente</div>
@@ -28,7 +28,8 @@
           -->
           <app-parent-data [welcome]="welcome" [userData]="userData"></app-parent-data>
         </div>
-        <div class="card-footer">Você pode entender como funciona essa função do Angular abrindo o projeto e lendo o HTML e os Typescripts.</div>
+        <div class="card-footer">Você pode entender como funciona essa função do Angular abrindo o projeto e lendo o
+          HTML e os Typescripts.</div>
       </div>
     </div>
 
@@ -38,7 +39,8 @@
         <div class="card-body">
           <app-directives></app-directives>
         </div>
-        <div class="card-footer">Aqui são apenas maneiras de como estilizar seu HTML sem usar CSS básico, confira tudo no próprio projeto.</div>
+        <div class="card-footer">Aqui são apenas maneiras de como estilizar seu HTML sem usar CSS básico, confira tudo
+          no próprio projeto.</div>
       </div>
     </div>
 
@@ -48,7 +50,8 @@
         <div class="card-body">
           <app-if-render></app-if-render>
         </div>
-        <div class="card-footer">Acima utlizamos mais uma diretiva do Angular dessa vez *ngIf, clicando no botão pode ver a resposta quando não atende ao criterio do meu if.</div>
+        <div class="card-footer">Acima utlizamos mais uma diretiva do Angular dessa vez *ngIf, clicando no botão pode
+          ver a resposta quando não atende ao criterio do meu if.</div>
       </div>
     </div>
 
@@ -72,7 +75,8 @@
         <div class="card-body">
           <app-emitter></app-emitter>
         </div>
-        <div class="card-footer">Utilizando o @output() conseguimos fazer com que o filho mande informações para o pai, onde toda lógica será feita.</div>
+        <div class="card-footer">Utilizando o @output() conseguimos fazer com que o filho mande informações para o pai,
+          onde toda lógica será feita.</div>
       </div>
     </div>
 
@@ -82,7 +86,9 @@
         <div class="card-body">
           <app-list-render></app-list-render>
         </div>
-        <div class="card-footer">Nesse card temos duas aulas, primeiro aprendemos como inicializar uma lista e fazer um loop nela e segundo apredemos como criar uma interface assim limpando mais nosso código não deixando a tipagem das coisas serem any.</div>
+        <div class="card-footer">Nesse card temos duas aulas, primeiro aprendemos como inicializar uma lista e fazer um
+          loop nela e segundo apredemos como criar uma interface assim limpando mais nosso código não deixando a tipagem
+          das coisas serem any.</div>
       </div>
     </div>
 
@@ -92,7 +98,8 @@
         <div class="card-body">
           <app-pipes></app-pipes>
         </div>
-        <div class="card-footer">Aprendemos alguns pipes que podem ser interessante na hora de escrever o código, assim nos poupando de algum tipo de CSS ou lógica no Typescript.</div>
+        <div class="card-footer">Aprendemos alguns pipes que podem ser interessante na hora de escrever o código, assim
+          nos poupando de algum tipo de CSS ou lógica no Typescript.</div>
       </div>
     </div>
 
@@ -106,37 +113,52 @@
         <div class="card-body">
           <app-two-way-binding></app-two-way-binding>
         </div>
-        <div class="card-footer">Ligação de Dados Bidimensional nada mais é que conectar um dados do HTML em tempo real a um dados do meu Typescript. Posso mostrar em tela ou usar para lógica do código.</div>
+        <div class="card-footer">Ligação de Dados Bidimensional nada mais é que conectar um dados do HTML em tempo real
+          a um dados do meu Typescript. Posso mostrar em tela ou usar para lógica do código.</div>
       </div>
     </div>
 
     <div class="col-3">
       <div class="card border-dark">
-        <div class="card-header" [ngClass]="class"></div>
+        <div class="card-header" [ngClass]="class">Services</div>
         <div class="card-body">
-          
+
         </div>
-        <div class="card-footer"></div>
+        <div class="card-footer">Podemos ver mais sobre service na aula onde utilizamos *ngFor porque foi nesse
+          componente que fizemos a lógica devido a termos um semi banco de dados.</div>
       </div>
     </div>
 
     <div class="col-3">
       <div class="card border-dark">
-        <div class="card-header" [ngClass]="class"></div>
+        <div class="card-header" [ngClass]="class">Routing Module e Router Link</div>
         <div class="card-body">
-          
+          <router-outlet></router-outlet>
+
+          <hr>
+
+          <button class="btn btn-primary mt-2" routerLink="directives">Directives</button> <br>
+          <button class="btn btn-primary mt-2" routerLink="emitter">Emitter</button> <br>
+          <button class="btn btn-primary mt-2" routerLink="events">Events</button> <br>
+          <button class="btn btn-primary mt-2" routerLink="firstComponent">First Component</button> <br>
+          <button class="btn btn-primary mt-2" routerLink="ifRender">If Render</button> <br>
+          <button class="btn btn-primary mt-2" routerLink="listRender">List Render</button> <br>
+          <button class="btn btn-primary mt-2" routerLink="parentData">Parent Data</button> <br>
+          <button class="btn btn-primary mt-2" routerLink="pipes">Pipes</button> <br>
+          <button class="btn btn-primary mt-2" routerLink="">Router Outlet</button> <br>
+          <button class="btn btn-primary mt-2" routerLink="twoWayBinding">Two Way Data Biding</button> <br>
         </div>
-        <div class="card-footer"></div>
+        <div class="card-footer">Nesse card conseguimos chamar qualquer aula que quisermos devido ao Routing Module que permite a visualização dos nosso componente através de caminhos utlizando router-outlet.</div>
       </div>
     </div>
 
     <div class="col-3">
       <div class="card border-dark">
-        <div class="card-header" [ngClass]="class"></div>
+        <div class="card-header" [ngClass]="class">HttpClient</div>
         <div class="card-body">
-          
+
         </div>
-        <div class="card-footer"></div>
+        <div class="card-footer">Podemos acompanhar como funciona essa requisição em nossa aula sobre list, criamos um novo banco de dados que simula uma API assim conseguimos fazer requisiçoes HTTP.</div>
       </div>
     </div>
 

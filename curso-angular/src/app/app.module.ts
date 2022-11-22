@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+
+// importamos nosso HttpClientModule para podermos fazer requisições HTTP
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
@@ -13,6 +17,7 @@ import { ChangeNumberComponent } from './components/change-number/change-number.
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { RouterOutletComponent } from './components/router-outlet/router-outlet.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +31,15 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
     ChangeNumberComponent,
     ListRenderComponent,
     PipesComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    RouterOutletComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+    // declramos o Http como todas as outras declarações de classes auxiliares do angular
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
