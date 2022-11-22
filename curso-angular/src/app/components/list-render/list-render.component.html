@@ -1,6 +1,6 @@
 <ul>
     <li *ngFor='let animal of animals'>
-        Nome: {{animal.name}}
+        Nome: <a routerLink="listRender/{{animal.id}}">{{animal.name}}</a>
         Tipo: {{animal.type}} <br>
         <button class="btn btn-primary me-2" (click)="showAge(animal)">Mostra Idade</button>
         <button class="btn btn-danger me-2" (click)="removeAnimal(animal)">Remover</button>

@@ -18,6 +18,7 @@ import { ListRenderComponent } from './components/list-render/list-render.compon
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { RouterOutletComponent } from './components/router-outlet/router-outlet.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RouterOutletComponent } from './components/router-outlet/router-outlet.
     ListRenderComponent,
     PipesComponent,
     TwoWayBindingComponent,
-    RouterOutletComponent
+    RouterOutletComponent,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,

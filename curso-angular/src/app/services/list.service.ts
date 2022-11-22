@@ -36,4 +36,12 @@ export class ListService {
     // funcionar corretamente as requisições do Angular
     return this.http.get<Animal[]>(this.apiURL);
   }
+
+  // Observable<Animal> vai observar se ocorre tudo certo na requisição
+  // Passamos um id como parâmetro porque agora queremos achar apenas um animal
+  getItem(id: number): Observable<Animal> {
+    // vamos retornar para minha classe item detail um animal só
+    // assim la conseguiremos atribuir valor
+    return this.http.get<Animal>(`${this.apiURL}/${id}`)
+  }
 }
