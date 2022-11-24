@@ -32,7 +32,11 @@ export class ListRenderComponent implements OnInit {
   // apenas criando uma função para remover um animal da minha lista
   // usando a função remove do meu service eu atualizo minha lista de animais
   removeAnimal(param: Animal): void {
-    this.animals = this.listService.remove(this.animals, param);
+    this.animals = this.animals.filter( (a) => param.name !== a.name );
+
+  // mesmo que eu não tenha nenhuma atribuição eu preciso chamar o subscribe() para o angular
+  // entender que está sendo feito uma ação
+    this.listService.remove(param.id).subscribe();
   }
 
   getAnimals(): void {

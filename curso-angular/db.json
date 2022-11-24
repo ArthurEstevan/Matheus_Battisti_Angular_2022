@@ -1,8 +1,22 @@
 {
   "animals": [
-    { "id": 1, "name": "Tigre", "type": "Selvagem", "age": 1 },
-    { "id": 2, "name": "Cavalo", "type": "Criação", "age": 2 },
-    { "id": 3, "name": "Porco", "type": "Criação", "age": 3 },
-    { "id": 4, "name": "Girafa", "type": "Selvagem", "age": 4 }
+    {
+      "id": 1,
+      "name": "Tigre",
+      "type": "Selvagem",
+      "age": 1
+    },
+    {
+      "id": 2,
+      "name": "Cavalo",
+      "type": "Criação",
+      "age": 2
+    },
+    {
+      "id": 4,
+      "name": "Girafa",
+      "type": "Selvagem",
+      "age": 4
+    }
   ]
 }

@@ -21,13 +21,15 @@ export class ListService {
   // essa função exclui um animal da minha lista de animais
   // posso chamar esse service em qualquer lugar que eu queira
   // ou seja o service facilita em lógicas usadas com frequencia como CRUDS e etc...
-  remove( animals: Animal[], animal: Animal ) {
+  remove( id: number ) {
 
     // primeiro eu filtro minha lista de animais
     // usando um foreach
     // onde o animal.name for diferente de a.name vai excluir
     // sempre será diferente isso que faz a lógica ter sentindo
-    return animals.filter( (a) => animal.name !== a.name );
+
+    // não estou observando nada então posso apena chamar o delete na minha url do banco de dados
+    return this.http.delete<Animal>(`${this.apiURL}/${id}`)
   }
 
   // Observable<Animal[]> vai observar se ocorre tudo certo na requisição
