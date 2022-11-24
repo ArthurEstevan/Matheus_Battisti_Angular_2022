@@ -1,0 +1,21 @@
+<!-- 
+    O conceito principal de Two Way Data Binding:
+é que estou modificando em um lugar e refletindo no outro
+tanto que sua tradução é Ligação de Dados Bidimensional
+ou seja nesse exemplo tenho um input que envia dados a uma váriavel
+então em tempo real ela é modificada no Typescript 
+e por melhor apresentação eu mostro ela em tela 
+-->
+
+<ng-template #nameNull>
+    <h6>Informe o nome.</h6>
+</ng-template>
+
+<h6 *ngIf="name != ''; else nameNull">Welcome Sr. {{name}}!</h6>
+
+<form class="form-floating">
+    <input class="form-control border-dark" placeholder="name" type="text" name="name" [(ngModel)]="name">
+    <label for="name">Nome</label>
+    <button class="btn btn-primary mt-2 me-2" type="submit">Enviar</button>
+    <button class="btn btn-danger mt-2 me-2" type="reset">Cancelar</button>
+</form>

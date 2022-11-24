@@ -1,0 +1,11 @@
+<!-- 
+    Devido ao nosso animal poder ou não conter valor nos temos que usar esse if de confirmação
+só conseguimos ver os animais quando ocorre o reload a página de uma para outra 
+-->
+<div *ngIf="animal">
+    <img *ngIf="animal.id == 1" src={{photoAnimals[0]}} width="220" height="200px">
+    <img *ngIf="animal.id == 2" src={{photoAnimals[1]}} width="220" height="200px">
+    <img *ngIf="animal.id == 3" src={{photoAnimals[2]}} width="220" height="200px">
+    <img *ngIf="animal.id == 4" src={{photoAnimals[3]}} width="220" height="200px">
+</div>
+

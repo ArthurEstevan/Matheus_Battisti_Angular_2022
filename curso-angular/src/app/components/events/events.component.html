@@ -1,0 +1,12 @@
+<!-- 
+    Colocamos novamente um *ngIf utlizando a interpolação para fazermos alteração
+Utilizando o evento de (click) 
+-->
+<h6 *ngIf="show">Mostrando mensagem.</h6>
+
+<!-- 
+    Nesse button atribuimos a ele um vento que ao clicar 
+será alterado a propriedade da interpolação acima
+Ultilizando nosso evento (click) que é responsavel por chamar uma função no Typescript 
+-->
+<button class="btn btn-primary" (click)="showMessage()">Mostrar mensagem e Esconder mensagem</button>
