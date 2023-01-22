@@ -61,3 +61,14 @@ input[type=submit]:hover {
 input[type=file] {
     padding: 7.68px 7.68px 7.68px 0px;
 }
+
+.validation-error p {
+    color: #DC3545;
+    margin-top: 0.4em;
+    border-left: 3px solid #DC3545;
+    padding-left: 0.2em;
+}
+
+.form-group textarea {
+    height: 100px;
+}
