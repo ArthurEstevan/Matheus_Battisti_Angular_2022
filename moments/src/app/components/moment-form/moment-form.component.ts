@@ -1,27 +1,42 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms'
-import { Moment } from 'src/app/Moments';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Moment } from 'src/app/Moment';
 
 @Component({
   selector: 'app-moment-form',
   templateUrl: './moment-form.component.html',
-  styleUrls: ['./moment-form.component.css']
+  styleUrls: ['./moment-form.component.css'],
 })
-export class MomentFormComponent {
-
+export class MomentFormComponent implements OnInit {
+  @Output() onSubmit = new EventEmitter<Moment>();
+  @Input() momentData: Moment | null = null;
   @Input() btnText!: string;
-  momentForm!: FormGroup
-  @Output() onSubmit = new EventEmitter<Moment>()
 
-  constructor() { }
+  image?: File;
+
+  momentForm!: FormGroup;
+
+  constructor() {}
 
   ngOnInit(): void {
-    this.momentForm = new FormGroup({
-      id: new FormControl(''),
-      title: new FormControl('', [Validators.required]),
-      description: new FormControl('', [Validators.required]),
-      image: new FormControl(''),
-    })
+    if (this.momentData) {
+      console.log(this.momentData);
+      this.momentForm = new FormGroup({
+        id: new FormControl(this.momentData.id),
+        title: new FormControl(this.momentData.title, [Validators.required]),
+        description: new FormControl(this.momentData.description, [
+          Validators.required,
+        ]),
+        image: new FormControl(''),
+      });
+    } else {
+      this.momentForm = new FormGroup({
+        id: new FormControl(''),
+        title: new FormControl('', [Validators.required]),
+        description: new FormControl('', [Validators.required]),
+        image: new FormControl(''),
+      });
+    }
   }
 
   get title() {
@@ -34,14 +49,17 @@ export class MomentFormComponent {
 
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
-    this.momentForm.patchValue({image: file});
+
+    this.momentForm.patchValue({ image: event.target.files[0] });
   }
 
   submit() {
-    if(this.momentForm.invalid) {
+    if (this.momentForm.invalid) {
       return;
     }
+
     console.log(this.momentForm.value);
-    this.onSubmit.emit(this.momentForm.value)
+
+    this.onSubmit.emit(this.momentForm.value);
   }
 }

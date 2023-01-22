@@ -1,44 +1,52 @@
 import { Component, OnInit } from '@angular/core';
-import { Moment } from 'src/app/Moments';
-import { MomentsService } from 'src/app/services/moments.service';
-import { MessagesService } from 'src/app/services/messages.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+import { MomentService } from 'src/app/services/moment/moment.service';
+
 import { Router } from '@angular/router';
+
+import { MessagesService } from 'src/app/services/messages/messages.service';
+import { Moment } from 'src/app/Moment';
 
 @Component({
   selector: 'app-new-moment',
   templateUrl: './new-moment.component.html',
-  styleUrls: ['./new-moment.component.css']
+  styleUrls: ['./new-moment.component.css'],
 })
-export class NewMomentComponent {
-  btnText: string = 'Compartilhar';
+export class NewMomentComponent implements OnInit {
+  btnText: string = 'Compartilhar!';
+  image?: File;
 
   constructor(
-    private momentService: MomentsService, 
-    private messageService: MessagesService, 
-    private router: Router
-    ) { }
+    private momentService: MomentService,
+    private router: Router,
+    private messagesService: MessagesService
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+
+    this.image = file;
   }
+
+  buildForm() {}
 
   async createHandler(moment: Moment) {
     const formData = new FormData();
-    formData.append('title', moment.title)
-    formData.append('description', moment.description)
+
+    formData.append('title', moment.title);
+    formData.append('description', moment.description);
 
     if (moment.image) {
-      formData.append('image', moment.image)
+      formData.append('image', moment.image);
     }
 
-    // to do
+    await this.momentService.createMoment(formData).subscribe();
 
-    // enviar para o service []
-    await this.momentService.createMoment(formData).subscribe()
-    this.messageService.add("Momento adicionado com sucesso!")
-    // exibir msg
-    // redirect
+    this.messagesService.add(`Momento adicionado com sucesso!`);
 
-    this.router.navigate(['/'])
-    console.log("Ok");
+    this.router.navigate(['/']);
   }
 }
