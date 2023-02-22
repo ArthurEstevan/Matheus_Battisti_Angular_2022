@@ -1,42 +1,61 @@
 # Projeto Moment: Development in Angular ![](/assets/hiclipart.com.png)
 
-## _Repository with several subjects in AdonisJS_
+## _Repository with several subjects in Angular_
 
 > _Practical contents carried out during extracurricular studies._
 >
 > - **_TYPESCRIPT - Programming language._**
 > - **_JAVASCRIPT - Programming language._**
+> - **_HTML - Hyper Text Markup Language._**
+> - **_CSS - Cascading Style Sheets._**
+> - **_Angular - Framework Javascript._**
 > - **_NODE.JS - Software._**
+> - **_ADONISJS - Estrutura MVC._**
 
-![Matheus Battisti](/assets/Capa%20for%20Project.jpg)
+![Matheus Battisti](/assets/angular.png)
 
-## ![](/Icons/instrucoes.png) Instructions for Execute the Project 
+## ![](/assets/instrucoes.png) Instructions for Execute the Project 
 
 1. Make a project copy to your machine: 
-    - [Git Clone](https://github.com/ArthurEstevan/Matheus-Battist-AdonisJS-2022) ⇽ Clone this repository on your computer
-    - [Download](https://github.com/ArthurEstevan/Matheus-Battist-AdonisJS-2022/archive/refs/heads/master.zip) ⇽ Or a direct download from the page 
+    - [Git Clone](https://github.com/ArthurEstevan/Matheus_Battisti_Angular_2022) ⇽ Clone this repository on your computer
+    - [Download](https://github.com/ArthurEstevan/Matheus_Battisti_Angular_2022/archive/refs/heads/main.zip) ⇽ Or a direct download from the page 
 
 2. Import the project into your IDE and execute the application.
 
-3. Import too the list of collection in your Postman:
+![Angular]()
+
+5. Make a project copy AdonisJS to your machine
+- [Git Clone](https://github.com/ArthurEstevan/Matheus_Battist_AdonisJS_2022) ⇽ Clone this repository on your computer
+- [Download](https://github.com/ArthurEstevan/Matheus_Battist_AdonisJS_2022/archive/refs/heads/master.zip) ⇽ Or a direct download from the page 
+
+4. Import too the list of collection in your Postman:
 - [Postman Collection](https://github.com/ArthurEstevan/Matheus-Battist-AdonisJS-2022/tree/master/Postman) ⇽ Opens this arquive in your postman, just like in the picture below
 
 ![Postman](/assets/Import%20in%20Postman.png)
 
+6. Add the AdonisJS project inside the Moment project folder made in Angular
+
+![Move]()
+
+7. Run the "npm install" command on the integrated terminal of your IDE in the AdonisJS project so that the project can run error-free on your machine
+
+![Config]()
+
+8. Now it's okay to see the Moment project working.
+
 <br>
-    
+
 ---
 
-## ![](/Icons/icon_conceito.png) About the Project
+## ![](/assets/icon_conceito.png) About the Project
 
-Project developed in AdonisJs (framework for Node.Js), this project was intended to further fix the knowledge in the database, however, this time the database format was all Typescript. Using our standard Vscode front-end tool.
-Finally we will use this project to complement another one I'm developing in Angular (framework for Javascript). In the future you will be able to have access to both projects in a single one.
+The Momento project is a web application developed in Angular with the goal of creating a social network where users can share their photos. The main idea of the project is to provide a virtual environment for users to connect, share, and interact with others through their images.
 
 <br>
 
 ---
 
-## ![](/Icons/configuracoes.png) Technologies Used
+## ![](/assets/configuracoes.png) Technologies Used
 
 - ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-black?style=for-the-badge&logo=visual-studio-code&logoColor=007ACC)&nbsp; IDE - Integrated development environment
 
@@ -60,5 +79,5 @@ Finally we will use this project to complement another one I'm developing in Ang
 
 > Channel where I learned how to do this project.
 
-1. [Matheus Battisti](https://www.youtube.com/watch?v=y8XfJJYhXPE)
+1. [Matheus Battisti Class About Angular](https://www.youtube.com/c/MatheusBattisti)
 2. [Site Official AdonisJS](https://adonisjs.com)
