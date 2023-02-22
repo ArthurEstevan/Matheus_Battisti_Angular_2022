@@ -1,4 +1,4 @@
-# Projeto Moment: Development in Angular ![](/Icons/AdonisJS%20Logo.svg)
+# Projeto Moment: Development in Angular ![](/assets/hiclipart.com.png)
 
 ## _Repository with several subjects in AdonisJS_
 
