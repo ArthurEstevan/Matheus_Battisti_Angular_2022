@@ -61,11 +61,13 @@ The Momento project is a web application developed in Angular with the goal of c
 
 - ![Html](https://img.shields.io/badge/Html-black?style=for-the-badge&logo=html5&logoColor=#E34F26)&nbsp; Frontend - Front-end Web Development 
 
-- ![Html](https://img.shields.io/badge/Typescript-black?style=for-the-badge&logo=typescript&logoColor=#E34F26)&nbsp; Typescript - Programming language.
+- ![Typescript](https://img.shields.io/badge/Typescript-black?style=for-the-badge&logo=typescript&logoColor=#E34F26)&nbsp; Typescript - Programming language.
+
+- ![Angular](https://img.shields.io/badge/Angular-black?style=for-the-badge&logo=angular)&nbsp; Angular - Framework Javascript.
 
 - ![Markdown](https://img.shields.io/badge/Markdown-black?style=for-the-badge&logo=markdown&logoColor=#000000)&nbsp; Markdown language - Text Formatting 
 
-- ![Markdown](https://img.shields.io/badge/AdonisJS-black?style=for-the-badge&logo=adonisjs&logoColor=#000000)&nbsp; AdonisJs - Framework for Node.js. 
+- ![AdonisJS](https://img.shields.io/badge/AdonisJS-black?style=for-the-badge&logo=adonisjs&logoColor=#000000)&nbsp; AdonisJs - Framework for Node.js. 
 
 - ![Documentation](https://img.shields.io/badge/Documentation-black?style=for-the-badge&logo=academia&logoColor=#41454A)&nbsp; Documentation - File Documentation
 
@@ -79,5 +81,5 @@ The Momento project is a web application developed in Angular with the goal of c
 
 > Channel where I learned how to do this project.
 
-1. [Matheus Battisti Class About Angular](https://www.youtube.com/c/MatheusBattisti)
+1. [Matheus Battisti Lesson About Angular](https://www.youtube.com/c/MatheusBattisti)
 2. [Site Official AdonisJS](https://adonisjs.com)
